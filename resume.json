@@ -1,0 +1,101 @@
+{
+  "id": "resume-001",
+  "basics": {
+    "name": "Jeffy Lazar",
+    "label": "Cloud Engineer",
+    "email": "jlazar89@gmail.com",
+    "phone": "(555) 123-4567",
+    "summary": "Passionate cloud engineer specializing in Google Cloud Platform and serverless architectures.",
+    "location": {
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jeffylazar",
+        "url": "https://linkedin.com/in/jeffylazar"
+      },
+      {
+        "network": "GitHub",
+        "username": "jlazar89",
+        "url": "https://github.com/jlazar89"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Tech Solutions Inc",
+      "position": "Cloud Engineer",
+      "website": "https://techsolutions.example.com",
+      "startDate": "2022-01-01",
+      "endDate": "",
+      "summary": "Leading cloud infrastructure projects on Google Cloud Platform",
+      "highlights": [
+        "Migrated legacy applications to Cloud Functions",
+        "Implemented CI/CD pipelines using Cloud Build",
+        "Reduced infrastructure costs by 40%"
+      ]
+    },
+    {
+      "company": "Digital Innovations",
+      "position": "Junior Developer",
+      "startDate": "2020-06-01",
+      "endDate": "2021-12-31",
+      "summary": "Developed web applications and APIs",
+      "highlights": [
+        "Built RESTful APIs using Node.js",
+        "Worked with Firestore and Cloud Storage"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Toronto",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2016-09-01",
+      "endDate": "2020-05-01",
+      "gpa": "3.7",
+      "courses": [
+        "Cloud Computing",
+        "Database Systems",
+        "Software Engineering"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Cloud Platforms",
+      "level": "Advanced",
+      "keywords": ["GCP", "Cloud Functions", "Firestore", "Cloud Run"]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": ["JavaScript", "Node.js", "Python", "TypeScript"]
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate",
+      "keywords": ["CI/CD", "GitHub Actions", "Docker", "Terraform"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "French",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Open Source",
+      "keywords": ["Contributing to cloud-native projects"]
+    }
+  ]
+}
