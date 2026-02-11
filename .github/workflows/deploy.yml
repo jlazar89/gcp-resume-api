@@ -1,0 +1,47 @@
+name: Deploy to Google Cloud Functions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Cloud Function
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy to Cloud Functions
+        run: |
+          gcloud functions deploy getResume \
+            --gen2 \
+            --runtime=nodejs20 \
+            --region=northamerica-northeast1 \
+            --source=. \
+            --entry-point=getResume \
+            --trigger-http \
+            --allow-unauthenticated \
+            --project=${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Get Function URL
+        run: |
+          URL=$(gcloud functions describe getResume \
+            --region=northamerica-northeast1 \
+            --gen2 \
+            --format="value(serviceConfig.uri)" \
+            --project=${{ secrets.GCP_PROJECT_ID }})
+          echo "🚀 Function URL: $URL"
